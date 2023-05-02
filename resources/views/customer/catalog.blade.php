@@ -20,27 +20,26 @@
                 </div>
             </div>
             <section class="section row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12">
                     <div class="card">
                         <div class="card-header">
                             <h2 class="card-title">Tire Repair Cost Estimation</h2>
+                            <hr>
                         </div>
                         <div class="card-body">
-                            <h6>Minor Repair</h6>
-                            <p>Rp 10.000.000 – Rp 20.000.000</p>
-                            <a href="{{ route ('orderform.page') }}" class="btn icon btn-outline-primary rounded-pill"> Continue Booking <i class="bi bi-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Tire Repair Cost Estimation</h2>
-                        </div>
-                        <div class="card-body">
-                            <h6>Major Repair</h6>
-                            <p>Rp 20.000.000 – Rp 30.000.000</p>
-                            <a href="{{ route ('orderform.page') }}" class="btn icon btn-outline-primary rounded-pill"> Continue Booking <i class="bi bi-arrow-right"></i></a>
+                            <div class="row">
+                                <div class="col-12 col-lg-6 text-center">
+                                    <h6>Minor Repair</h6>
+                                    <p>Rp 10.000.000 – Rp 20.000.000</p>
+                                </div>
+                                <div class="col-12 col-lg-6 text-center">
+                                    <h6>Major Repair</h6>
+                                    <p>Rp 20.000.000 – Rp 30.000.000</p>
+                                </div>
+                                <div class="col-12 my-1 d-flex justify-content-center">
+                                    <a href="{{ route ('orderform.page') }}" class="btn icon btn-outline-primary rounded-pill"> Continue Booking <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

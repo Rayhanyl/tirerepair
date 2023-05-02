@@ -93,7 +93,7 @@
                             <div class="col-12 col-lg-6 my-auto">
                                 <div class="card shadow">
                                     <div class="card-body">
-                                        <form class="form form-vertical">
+                                        <form class="form form-vertical" action="{{ route ('authentication') }}" method="POST">
                                             @csrf
                                             <div class="form-body">
                                                 <div class="row">
@@ -104,7 +104,7 @@
                                                         <div class="form-group has-icon-left">
                                                             <label for="email-id-icon">Email</label>
                                                             <div class="position-relative">
-                                                                <input type="text" class="form-control" placeholder="Email" id="email-id-icon">
+                                                                <input type="text" class="form-control" name="email" placeholder="Email" id="email-id-icon">
                                                                 <div class="form-control-icon">
                                                                     <i class="bi bi-envelope"></i>
                                                                 </div>
@@ -115,7 +115,7 @@
                                                         <div class="form-group has-icon-left">
                                                             <label for="password-id-icon">Password</label>
                                                             <div class="position-relative">
-                                                                <input type="password" class="form-control" placeholder="Password" id="password-id-icon">
+                                                                <input type="password" class="form-control" name="password" placeholder="Password" id="password-id-icon">
                                                                 <div class="form-control-icon">
                                                                     <i class="bi bi-lock"></i>
                                                                 </div>
@@ -123,8 +123,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-12 d-flex justify-content-end">
-                                                        <a href="{{ route ('home.page') }}" type="submit" class="btn btn-primary me-1 mb-1">Sign in</a>
-                                                        {{-- <button type="submit" class="btn btn-primary me-1 mb-1">Sign in</button> --}}
+                                                        {{-- <a type="submit" class="btn btn-primary me-1 mb-1">Sign in</a> --}}
+                                                        <button type="submit" class="btn btn-primary me-1 mb-1">Sign in</button>
                                                         <button type="reset" class="btn btn-warning me-1 mb-1">Register</button>
                                                     </div>
                                                 </div>
@@ -154,7 +154,7 @@
     <script src="{{ asset ('assets/js/bootstrap.js') }}"></script>
     <script src="{{ asset ('assets/js/app.js') }}"></script>
     <script src="{{ asset ('assets/js/pages/horizontal-layout.js') }}"></script>
-
+    @include('sweetalert::alert')
     <script src="{{ asset ('assets/extensions/apexcharts/apexcharts.min.js') }}"></script>
     <script src="{{ asset ('assets/js/pages/dashboard.js') }}"></script>
 </body>

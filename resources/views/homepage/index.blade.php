@@ -13,13 +13,16 @@
                         <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Customer</li>
+                                <li class="breadcrumb-item text-capitalize active" aria-current="page">{{ $users->role }}</li>
                             </ol>
                         </nav>
                     </div>
                 </div>
             </div>
             <section class="section row">
+                {{-- <div class="col-12">
+                    @dd($users)
+                </div> --}}
                 @for ($i = 0; $i < 4; $i++)
                 <div class="col-12 col-lg-3">
                     <div class="card">
